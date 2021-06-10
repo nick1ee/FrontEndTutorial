@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title></title>
+        <style type="text/css">
+            .head {
+                background-color: #003344; color:white; font-weight: bold;font-size: 30px;
+                text-align: center;padding: 10px;
+            }
+            .content {
+                width: 1000px; margin-left: auto; margin-right: auto; 
+            }
+            .box {
+                width: 280px; padding: 10px; margin: 10px; background-color: white;
+                display: inline-block; vertical-align: top;
+                text-align: center; height: 150px; line-height: 30px;
+            }
+            .title {
+                font-weight: bold;
+            }
+
+            /* 使用者使用螢幕超過 600px 寬的時候，套用大括弧內的樣式 */
+            @media screen and (max-width: 600px) {
+                .content {
+                    width: 100%; text-align: center; padding-top: 20px;
+                }
+                .head {
+                    font-size: 24px;
+                }
+            }
+        </style>
+    </head>
+    <body style="margin: 0px;background-color: lightgray;">
+        <div class="head">Nick 的第一個網站</div>
+        <div class="content" >
+            <div class="box">
+                <div class="title">我的基本資料</div>
+                <div>我是男生</div>
+                <div>我住台灣</div>
+                <div>我喜歡說話</div>
+            </div>
+            <div class="box">
+                <div class="title">我的個人興趣</div>
+                <div>看個電影</div>
+                <div>打電動</div>
+                <div>睡個覺</div>
+            </div>
+            <div class="box">
+                <div class="title">歡迎與我連結</div>
+                <div>寫信</div>
+                <div>打電話</div>
+                <div>傳訊息</div>
+            </div>
+        </div>
+    </body>
+</html>
