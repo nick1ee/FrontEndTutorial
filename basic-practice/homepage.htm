@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <!-- Web description -->
+    <head>
+        <meta charset="utf-8">
+        <title>首頁</title>
+        <style type="text/css">
+            table {
+                width: 400px;
+                border-collapse: collapse;
+            }
+
+            td {
+                border-bottom: 1px solid #888888;padding: 10px;
+            }
+
+            /* 表格中第一列 */
+            tr:nth-child(1) {
+                background-color: #7788aa;color:#ffffff;font-weight: bold;
+            }
+
+            /* 表格中的偶數列 */
+            tr:nth-child(even) {
+                background-color: #e8e8e8;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>React Picture</h3>
+        <img src="./react.png"></img>
+        <hr/>
+        <h3>My Favorite</h3>
+        <ul>
+            <li><a href="https://www.google.com">Google</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.yahoo.com">Yahoo</a></li>
+        </ul>
+        <h3>MLB Baseball</h3>
+        <table width="400" cellpadding="6">
+            <tr>
+                <td>Name</td>
+                <td>Win</td>
+                <td>Lose</td>
+            </tr>
+            <tr>
+                <td><b>New York <u>Yankees</u></b></td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td><u>Boston Red Sox</u></td>
+                <td>6</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><u>Toronto Blue Jays</u></td>
+                <td>8</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS Tutorial</title>
+        <style type="text/css">
+
+        
+            /* 1. 標籤名稱選擇器 */
+            body {
+                font-size:"16px";font-family:"微軟正黑體";
+            }
+            h3 {
+                color: red;
+            }
+
+            /* 2. class 選擇器(前面加 .) */
+            .title {
+                font-weight: bold;font-size: 30px;
+            }
+            
+            div.content {
+                width: 400px; padding: 10px;border: 1px dashed blue;margin-top: 10px;margin-bottom: 10px;
+            }
+            
+            .keyword {
+                color: green;
+            }
+
+            .box {
+                /* 絕對定位不管放哪邊都不會受到影響，因為是針對整個網頁寫死的位置來做擺放 */
+                /* position: absolute;right: 0px;top: 0px; */
+                /* 相對定位則是依序擺放，以原始的位置作為基準點 */
+                position: relative;left: 0px;top: 0px;
+                width: 100px;height: 100px;background-color: yellow;
+            }
+
+            /* 3. id 選擇器(前面加 #) */
+            #btn {
+                border: 1px solid #888888;
+                background-color: white;
+                padding: 2px;
+            }
+
+            /* 4. 虛擬選擇器:搭配其他選擇器使用 */
+            /* id */
+            #btn:hover {
+                background-color: #888888;
+            }
+
+            /* html tag  */
+            input:focus {
+                border: 2px solid red;
+                background-color: chartreuse;
+            }
+
+
+            /* 5. 階層式選擇器:搭配其他選擇器使用 li 在 location 這個 class 以內，才套用 css 樣式 */
+            .location li {
+                color:blue
+            }
+
+            .food li {
+                color:purple
+            }
+        
+        </style>
+    </head>
+    <body>
+        <!-- div 會造成換行，span 不會 -->
+        <!-- 設定長寬只能在 div 內，行內標籤 span 不可使用-->
+        <div class="title">今天天氣不錯</div>
+        <div class="content">
+            我去公園散步，餵<span class="keyword">鴿子</span>。<br/>
+            覺得鴿子好可愛喔。
+            我還想去下面幾個地方玩
+        </div>
+        <ul class="location">
+            <li>水族館</li>
+            <li>博物館</li>
+            <li>金瓜石</li>
+        </ul>
+
+        <div class="content">
+            我也想吃下面幾個東西
+        </div>
+        <ul class="food">
+            <li>巧克力</li>
+            <li>汽水</li>
+            <li>蛋糕</li>
+        </ul>
+        
+        <div class="title">公園裡有很多小朋友</div>
+        <div class="content">
+            小朋友在玩溜滑梯、盪鞦韆，還有幾隻<span class="keyword">狗狗和貓貓</span>。
+        </div>
+        <div class="content">
+            還有幾位老先生<span style="position: relative;top: -8px">2</span>在聊天。
+        </div>
+        <div class="box"></div>
+        <h3>和我聯絡</h3>
+        <div class="content">
+            填寫訊息 <input type="text" /> <button id="btn">送出</button>
+        </div>
+    </body>
+</html>
