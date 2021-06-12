@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Javascript</title>
+        <script type="text/javascript">
+            
+            // alert(window.screen.width + "X" + window.screen.height);
+
+            function change()
+            {
+                var spanObj = window.document.getElementById("emotion");
+                spanObj.innerHTML = "fucking bad";
+                spanObj.style.color = "red";
+                spanObj.style.fontWeight = "bold";
+                spanObj.style.display = "none";
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>
+            Today is a <span id="emotion">good</span> day., Let's go to movie.
+        </div>
+        <button onclick="change();">Change</button>
+    </body>
+</html>
