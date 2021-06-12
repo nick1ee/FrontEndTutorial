@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> Event Handle</title>
+        <script type="text/javascript">
+            // 用 JavaScript 的程式，動態的註冊事件處理器
+            function init()
+            {
+                var btn = window.document.getElementById("btn");
+                // btn.onclick = () => { alert('Clicked'); };
+
+                var handler = () => {
+                    alert('Clicked');
+                }
+
+                btn.addEventListener("click", handler);
+            }
+
+            
+
+            // function over(element)
+            // {
+            //     element.style.color = "red";
+            // }
+
+            // function out(element)
+            // {
+            //     element.style.color = "black"
+            // }
+        </script>
+    </head>
+    <body onload="init();">
+        <button id="btn">
+            Click
+        </button>
+        <!-- <span onmouseover="over(this);" onmouseout="out(this);">
+            Test
+        </span>
+        <div onmouseover="over(this);" onmouseout="out(this);">
+            Line2
+        </div> -->
+    </body>
+</html>
