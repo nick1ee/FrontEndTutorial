@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> Ajax </title>
+        <script type="text/javascript">
+            function getData()
+            {
+                var request = new XMLHttpRequest();
+                request.open("get", "https://randomuser.me/api/");
+                request.onload = () => { // load 事件，偵測連線狀態結束
+                    // 連線完成
+                    content.textContent = JSON.stringify(request.response, undefined, 2);
+                };
+                request.send();
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="getData();">Get a random user.</button>
+        <pre id="content">
+
+        </pre>
+    </body>
+</html>
